@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // function sayHi() {
+    //   console.log("Hello");
+    // }
+
+    // let sayHi2 = function () {
+    //   console.log("Hello2");
+    // }
+
+    // let num1 = sayHi;
+    // let num2 = sayHi;
+
+    // console.log(num1);
+    // console.log(num2);
+
+    // num1();
+    // num2();
+
+
+    // function ask(question, yes, no) {
+    //   if (confirm(question)) {
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+    // function showOk() {
+    //   console.log("동의하셨습니다.");
+    // }
+    // function showCancel() {
+    //   console.log("취소하였습니다.");
+    // }
+    // // console.log(showOk);
+    // // console.log(showCancel);
+
+    // ask("동의하십니까?", showOk, showCancel);
+
+    // function ask(question, yes, no) {
+    //   if (confirm(question)) {
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+
+    // ask("동의하십니까?", function () { console.log("동의함"); }, function () { console.log("동의하지않음"); })
+
+    // hit();
+
+    // function hit() {
+    //   console.log("hit함수 실행");
+    // }
+
+
+    // hit2();
+    // let hit2 = function () {
+    //   console.log("hit2함수 실행");
+    // }
+
+    'use strict';
+
+    // let age = prompt("나이를 알려주세요.", "");
+
+    // if (age < 18) {
+    //   function welcome() {
+    //     alert("안녕!");
+    //   }
+    // } else {
+    //   function welcome() {
+    //     alert("안녕하세요!");
+    //   }
+    // }
+    // welcome();
+
+    let age = prompt("나이를 알려주세요.", "");
+    let welcome;
+    if (age < 18) {
+      welcome = function () {
+        alert("안녕!");
+      }
+    } else {
+      welcome = function () {
+        alert("안녕하세요!");
+      }
+    }
+    console.log(welcome);
+    welcome();
+
+  </script>
+
+</body>
+
+</html>
