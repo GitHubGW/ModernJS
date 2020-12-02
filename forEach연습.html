@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="market_ticket_title_tab">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </div>
+
+  <div class="market_ticket_content active">
+    <span>숙박 내용</span>
+  </div>
+  <div class="market_ticket_content">
+    <span>뮤지컬 내용</span>
+  </div>
+  <div class="market_ticket_content">
+    <span>연극/대학로 내용</span>
+  </div>
+  <div class="market_ticket_content">
+    <span>클래식/무용 내용</span>
+  </div>
+  <div class="market_ticket_content">
+    <span>전시/체험 내용</span>
+  </div>
+  <div class="market_ticket_content">
+    <span>키즈/가족</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+
+    // forEach문 설명
+    // forEach()안에는 콜백함수가 오고
+    // 차례대로 a에는 배열의 값
+    // b에는 배열의 인덱스
+    // c에는 배열자체를 불러온다
+    // forEach 반복문은 오직 Array 객체에서만 사용가능한 메서드입니다. (ES6부터는 Map,Set 지원)
+    // 배열의 요소들을 반복하여 작업을 수행할수 있습니다.
+    // forEach구문의 인자로 callback함수를 등록할수 있고, 배열의 각 요소들이 반복될 떄 이 callback 함수가 호출됩니다. 
+    // forEach의 callback 함수에서 배열요소의 인덱스와 값에 접근할수 있습니다.
+    // 배열의 첫번쨰부터 마지막까지 반복하면서 item을 꺼낼수 있다.
+    
+    // let arr=["사과","오렌지","포도"];
+    // console.log(arr);
+
+    // arr.forEach((a, b, c)=>{
+    //   console.log("a(배열의 값):"+a);
+    //   console.log("b(배열의 인덱스):"+b);
+    //   console.log("c(배열):"+c);
+    // })
+    
+    // let arr2=["강아지","고양이","악어"];
+    // console.log(arr2);
+    // console.log(arr2[0]);
+    // console.log(arr2[1]);
+    // console.log(arr2[2]);
+
+    // arr2.forEach((value,index,arr){
+    //   console.log(value);
+    //   console.log(index);
+    //   console.log(arr);
+    // });
+
+    // let box1_li=document.querySelectorAll('.box1 li');
+    // // console.log(box1_li);
+
+    // box1_li.forEach((value, index, arr)=>{
+    //   console.log(value);
+    //   console.log(index);
+    //   console.log(arr);
+    // })
+
+
+    // const titles = document.querySelectorAll('.market_ticket_title_tab li');
+    // const contents = document.querySelectorAll('.market_ticket_content');
+    // console.log(titles); //li 전체를 배열로 가져옴
+    // console.log(contents); //div.market_ticket_content 전체를 배열로 가져옴
+
+    // titles.forEach((title, index) => {
+    //   console.log(title); //li를 뽑음
+    //   console.log(index); //li의 index를 뽑음
+
+    //   title.addEventListener('click', () =>{
+
+    //   titles.forEach((title, index)=>{
+    //     title.classList.remove('active');
+    //     contents[index].classList.remove('active');
+    //   });  
+
+    //   title.classList.add('active'); 
+    //   contents[index].classList.add('active');
+
+    //   });      
+      
+    // });
+
+    
+    // titles.forEach((title, index)=>{
+    //   // console.log(title);
+    //   // console.log(index);
+
+    //   title.addEventListener('click',(e)=>{
+    //     titles.forEach((title, index)=>{
+    //       title.classList.remove('active');
+    //       contents[index].classList.remove('active');
+    //     })
+    //     e.target.classList.add('active');
+    //     contents[index].classList.add('active');
+
+    //   })
+
+    // });
+    
+    $('.market_ticket_title_tab li').on('click',function(){
+      $('.market_ticket_title_tab li').removeClass('active');
+      $(this).addClass('active');
+
+      let li_index=$(this).index();
+
+      $('.market_ticket_content').removeClass('active');  
+      $('.market_ticket_content').eq(li_index).addClass('active');
+    });
+
+  </script>
+  
+</body>
+</html>
