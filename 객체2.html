@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // function makeUser(name, age){
+    //   return{
+    //     name: name,
+    //     age: age,
+    //   }
+    // }
+
+    // let user=makeUser("John", 30);
+    // console.log(user);
+
+
+    // let obj={};
+    // obj.name=5;
+    // console.log(obj);
+
+    // let obj2={};
+    // obj.__proto__=10;
+    // console.log(obj2);
+
+    // let obj3={};
+    // console.log(obj3.noSuchProperty===undefined);
+
+
+    // let obj4={name:"John", age:30};
+    // console.log("name" in obj4);
+    // console.log("age" in obj4);
+    // console.log("age2" in obj4);
+    // let user = {name: "John", age: 30, isAdmin: true};
+
+    //   for(key in user){
+    //     // console.log(key);
+    //     console.log(user[key]);
+    //     // console.log(user.key);
+    //   }
+
+    //   let codes = {
+    //     "49": "독일",
+    //     "41": "스위스",
+    //     "44": "영국",
+    //     "1": "미국"
+    //   };
+    //   console.log(codes);
+    //   console.log(+codes);
+
+    // 과제1
+    // let user={};
+    // user.name="John";
+    // user.surname="Smtith";
+    // user.name="Pete";
+    // delete user.name;
+    // console.log(user);
+
+    //과제2
+    let schedule={name:"john", age:20, country:"korea"};
+    // console.log(isEmpty(schedule));
+
+    function isEmpty(schedule){
+      return true;
+    }
+
+    isEmpty(schedule);
+    schedule["8:30"]="get up";
+    // console.log(schedule);
+
+    // schedule["8:30"]="get up";
+    // console.log(schedule);
+
+    // 과제4
+    let salaries={
+      John: 100,
+      Ann: 160,
+      Pete: 130,
+    }
+    // console.log(salaries);
+    // let sum=salaries["John"]+salaries["Ann"]+salaries["Pete"];
+    // console.log(sum);
+
+    let sum=0;
+    for(key in salaries){
+      sum=sum+salaries[key];
+    }
+    // console.log(sum);
+
+
+    // 과제5
+    let menu={
+      width: 200,
+      height: 300,
+      title: "My menu"
+    };
+
+    // console.log(menu);
+    // console.log(typeof menu["width"]);
+    // console.log(typeof menu["height"]);
+
+    multiplyNumeric(menu);
+    function multiplyNumeric(obj){
+
+      for(key in obj){
+        let menu_type=typeof menu[key]
+        if(menu_type==="number"){
+          menu[key]=menu[key]*2;
+        }else{
+
+        }
+      }
+
+    }
+    console.log(menu);
+
+
+  </script>
+  
+</body>
+</html>
