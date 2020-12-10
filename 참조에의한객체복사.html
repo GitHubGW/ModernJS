@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // let message="Hello";
+    // let phrase=message;
+
+    // let user={ name: "John" }
+    // console.log(user);
+
+    // let user2=user;
+    // console.log(user2);
+
+    // user2.age=13;
+    // console.log(user2);
+    // console.log(user);
+
+    // console.log(user==user2);
+    // console.log(user===user2);
+
+    // let a={};
+    // let b={};
+    // console.log(a==b);
+    // console.log(a===b);
+
+    let user={name: "John"};
+    let age={age:22};
+    let country={country:"Korea"};
+    console.log(user);
+    console.log(age);
+    console.log(country);
+
+    let copy={name:"Cody"};
+    console.log(copy);
+    Object.assign(copy, user, age, country);
+    console.log(copy);
+
+
+  </script>
+  
+</body>
+</html>
