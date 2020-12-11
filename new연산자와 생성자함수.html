@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // function User(name){
+    //   this.name=name;
+    //   this.isAdmin=false;
+
+    //   return this;
+    // }
+    // let user=new User("Jack");
+    // let user2=new User("Ann");
+    // let user3=new User("Tom");
+    // console.log(user);
+    // console.log(user2);
+    // console.log(user3);
+
+
+    // function say(name){
+    //   this.name=name;
+    //   this.isAdmin=false;
+
+    //   return this;
+    // }
+    // let say1=new say("Hello");
+    // console.log(say1);
+
+
+
+    // let phone=new function(name, company, country){
+    //   this.name=name;
+    //   this.company=company;
+    //   this.country=country;
+    // }
+    // console.log(phone);
+    // console.log(phone.name);
+    // console.log(phone.company);
+    // console.log(phone.country);
+
+      // function Phone(name, company, country){
+      //   this.name=name;
+      //   this.company=company;
+      //   this.country=country;
+      // }
+      // let phone1=new Phone("A31","Samsung","Korea");
+      // console.log(phone1);
+
+      // let phone2=new Phone("G-Pro","LG","Korea");
+      // console.log(phone2);
+
+      function User(name){
+        this.name=name;
+        this.sayHi=function(){
+          console.log("My name is "+this.name);
+        }
+      }
+
+      let john=new User("John");
+      console.log(john);
+      console.log(john.name);
+      console.log(john.sayHi());
+
+  </script>
+  
+</body>
+</html>

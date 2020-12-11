@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // 과제
+    // function A(){
+    //   return this;
+    // }
+    // function B(){
+    //   return this;
+    // }
+    // let a = new A();
+    // let b = new B();
+    // console.log(a);
+    // console.log(b);
+    // console.log(a==b);
+
+
+    // 과제2
+    // function Calculator(){
+      
+    //   this.read=function(){
+    //     this.num1=prompt("첫 번째 숫자","");
+    //     this.num2=prompt("두 번째 숫자","");
+    //   }
+
+    //   this.sum=function(){
+    //     return Number(this.num1)+Number(this.num2);
+    //   }
+    //   this.mul=function(){
+    //     return Number(this.num1)*Number(this.num2);
+    //   }
+    // }
+
+    // let calculator=new Calculator();
+    // console.log(calculator);
+    // console.log(calculator.read());
+    // console.log(calculator.sum());
+    // console.log(calculator.mul());
+    
+
+    // 과제3
+      function Accumulator(startingValue){
+        this.value=startingValue;
+        this.read=function(){
+          let num1=prompt("첫 번째 숫자는?","");
+          let num2=prompt("두 번째 숫자는?","");
+          return this.value=this.value+Number(num1)+Number(num2);
+        }
+      }
+
+      let acc=new Accumulator(1);
+      acc.read();
+      acc.read();
+      console.log(acc);
+      console.log(acc.value);
+
+
+  </script>
+  
+</body>
+</html>
